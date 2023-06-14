@@ -243,11 +243,11 @@ pub(crate) struct Approval {
 }
 
 #[derive(Debug)]
-pub(crate) struct Conn<C>
+pub struct Conn<C>
 where
     C: Send,
 {
-    pub(crate) conn: C,
+    pub conn: C,
     birth: Instant,
 }
 

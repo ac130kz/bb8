@@ -371,7 +371,7 @@ where
     M: ManageConnection,
 {
     pool: Cow<'a, PoolInner<M>>,
-    conn: Option<Conn<M::Connection>>,
+    pub conn: Option<Conn<M::Connection>>,
 }
 
 impl<'a, M> PooledConnection<'a, M>
